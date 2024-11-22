@@ -291,7 +291,7 @@ details p {
     border-radius: 5px;
     position: absolute;
     transition: all 0.5s;
-    transform: translate(0px, -27.5px);
+    transform: translate(0px, -1.2rem);
 }
 
 .menu-icon::before,
@@ -509,7 +509,7 @@ nav a strong {
 /* Extra small devices (phones, 576px and down) */
 @media only screen and (max-width: 576px) {
     .main__section_container {
-        grid-template-columns: repeat(2, 5rem);
+        grid-template-columns: repeat(2, 10rem);
     }
 
     .animated__text {
@@ -525,6 +525,10 @@ nav a strong {
         right: 20px;
         font-size: 1rem;
     }
+
+    h1 {
+        font-size: clamp(0.4rem, 4dvh, 0.6rem)
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 576px and up) */
@@ -535,6 +539,10 @@ nav a strong {
 
     .animated__text {
         font-size: clamp(0.9rem, 1.2dvh, 1.3rem);
+    }
+
+    h1 {
+        font-size: clamp(0.7rem, 2.2dvw, 1.0rem);
     }
 }
 
@@ -547,6 +555,10 @@ nav a strong {
     .animated__text {
         font-size: clamp(0.9rem, 1.2dvh, 1.3rem);
     }
+
+    h1 {
+        font-size: clamp(1rem, 2.2dvw, 1.2rem)
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -558,11 +570,19 @@ nav a strong {
     .animated__text {
         font-size: clamp(1rem, 1.6dvh, 1.5rem);
     }
+
+    h1 {
+        font-size: clamp(0.9rem, 2.2dvw, 1.3rem)
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
     .main__section_container {
-        grid-template-columns: repeat(2, 30em);
+        grid-template-columns: repeat(2, 25em);
+    }
+
+    h1 {
+        font-size: clamp(0.8rem, 2.2dvw, 1.7rem);
     }
 }
